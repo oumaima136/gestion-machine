@@ -139,7 +139,7 @@ MarqueService ms = new MarqueService();  @Override
             ps.setString(1, reference);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-             if(rs.getInt("count(*)")==0) {
+             if(rs.getInt("count")==0) {
             	 return true;
              }
             }
@@ -157,7 +157,7 @@ MarqueService ms = new MarqueService();  @Override
             ps.setInt(2, id);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-             if(rs.getInt("count(*)")==0) {
+             if(rs.getInt("count")==0) {
             	 return true;
              }
             }
@@ -215,7 +215,7 @@ MarqueService ms = new MarqueService();  @Override
             PreparedStatement pr =Connexion.getInstane().getConnection().prepareStatement(req);
             ResultSet rs = pr.executeQuery();
             while (rs.next()) {
-            	machines.put(rs.getString("libelle"), rs.getInt("count(*)"));
+            	machines.put(rs.getString("libelle"), rs.getInt("count"));
             }
 
         } catch (SQLException e) {
@@ -231,7 +231,7 @@ MarqueService ms = new MarqueService();  @Override
             PreparedStatement pr =Connexion.getInstane().getConnection().prepareStatement(req);
             ResultSet rs = pr.executeQuery();
             while (rs.next()) {
-            	machines.put(rs.getString("libelle"), rs.getInt("count(*)"));
+            	machines.put(rs.getString("libelle"), rs.getInt("count"));
             }
 
         } catch (SQLException e) {
@@ -248,7 +248,7 @@ MarqueService ms = new MarqueService();  @Override
             pr.setInt(1, id);
             ResultSet rs = pr.executeQuery();
             while (rs.next()) {
-            	machines.put(rs.getInt("MONTH(a.dateAchat)"), rs.getInt("count(*)"));
+            	machines.put(rs.getInt("MONTH(a.dateAchat)"), rs.getInt("count"));
             }
 
         } catch (SQLException e) {

@@ -73,7 +73,7 @@ public class MarqueService implements IDao<Marque> {
             ps.setInt(2, id);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-             if(rs.getInt("count(*)")==0) {
+             if(rs.getInt("count")==0) {
             	 return true;
              }
             }
@@ -145,7 +145,7 @@ public class MarqueService implements IDao<Marque> {
 	            ps.setString(1, code);
 	            ResultSet rs = ps.executeQuery();
 	            while (rs.next()) {
-	             if(rs.getInt("count(*)")==0) {
+	             if(rs.getInt("count")==0) {
 	            	 return true;
 	             }
 	            }

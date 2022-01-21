@@ -80,7 +80,7 @@ public class UserService implements IDao<User> {
             ps.setInt(2, id);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-             if(rs.getInt("count(*)")==0) {
+             if(rs.getInt("count")==0) {
             	 return true;
              }
             }
@@ -175,7 +175,7 @@ public boolean findUser(String email) {
             ps.setString(1, email);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-             if(rs.getInt("count(*)")==0) {
+             if(rs.getInt("count")==0) {
             	 return true;
              }
             }
