@@ -1,4 +1,3 @@
-
 <%@page import="beans.Marque"%>
 <%@page import="service.MarqueService"%>
 <%@page import="beans.Machine"%>

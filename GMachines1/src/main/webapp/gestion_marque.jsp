@@ -1,4 +1,3 @@
-
 <%@page import="beans.Marque"%>
 <%@page import="service.MarqueService"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
