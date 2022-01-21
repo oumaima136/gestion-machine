@@ -15,7 +15,7 @@ public class Connexion {
     private Connexion() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection(url, login, password);
+            connection = DriverManager.getConnection(url);
         } catch (ClassNotFoundException e) {
             System.out.println("Driver introvable");
         } catch (SQLException e) {
