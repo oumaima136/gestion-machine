@@ -8,7 +8,7 @@ public class Connexion {
 
     private static String login = "wfxzmfbbnadlme";
     private static String password = "1aec3874cf951b03e1c5357321acc2ebea4aa8d0947d25a2aa33b7d04c8f1d90";
-    private static String url = "postgres://wfxzmfbbnadlme:1aec3874cf951b03e1c5357321acc2ebea4aa8d0947d25a2aa33b7d04c8f1d90@ec2-54-175-147-69.compute-1.amazonaws.com:5432/d789m6upo45shc?serverTimezone=UTC";
+    private static String url = "postgres://wfxzmfbbnadlme:1aec3874cf951b03e1c5357321acc2ebea4aa8d0947d25a2aa33b7d04c8f1d90@ec2-54-175-147-69.compute-1.amazonaws.com:5432/d789m6upo45shc";
     private Connection connection;
     private static Connexion instane;
 
