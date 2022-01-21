@@ -14,7 +14,7 @@ public class Connexion {
 
     private Connexion() {
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName("org.postgresql.Driver");
             connection = DriverManager.getConnection(url, login, password);
         } catch (ClassNotFoundException e) {
             System.out.println("Driver introvable");
