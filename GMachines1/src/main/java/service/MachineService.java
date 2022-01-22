@@ -227,7 +227,7 @@ MarqueService ms = new MarqueService();  @Override
     public Map<String,Integer> findVariationMarque() {
     	Map<String,Integer> machines = new HashMap<String,Integer>();
         try {
-            String req = "select libelle,count(*) from machine a, marque b where a.marque=b.id group by marque ";
+            String req = "select b.libelle,count(*) from machine a, marque b where a.marque=b.id group by b.libelle ";
             PreparedStatement pr =Connexion.getInstane().getConnection().prepareStatement(req);
             ResultSet rs = pr.executeQuery();
             while (rs.next()) {
