@@ -243,7 +243,7 @@ MarqueService ms = new MarqueService();  @Override
     public Map<Integer,Integer> findMachinesByMarque(int id) {
     	Map<Integer,Integer> machines = new HashMap<Integer,Integer>();
         try {
-            String req = " select EXTRACT(MONTH FROM a.dateAchat), count(*) from machine a, marque b where a.marque=b.id and marque = ? group by a.dateAchat ;)";
+            String req = " select EXTRACT(MONTH FROM a.dateAchat), count(*) from machine a, marque b where a.marque=b.id and marque = ? group by a.dateAchat ";
             PreparedStatement pr =Connexion.getInstane().getConnection().prepareStatement(req);
             pr.setInt(1, id);
             ResultSet rs = pr.executeQuery();
