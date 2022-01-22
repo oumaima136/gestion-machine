@@ -16,7 +16,7 @@ public class MarqueService implements IDao<Marque> {
 
 	@Override
 	public boolean create(Marque o) {
-		String sql = "insert into marque(code,libelle) values (?, ?)";
+		String sql = "insert into marque(code,libelle) values (?,?)";
         try {
             PreparedStatement ps = Connexion.getInstane().getConnection().prepareStatement(sql);
             ps.setString(1, o.getCode());

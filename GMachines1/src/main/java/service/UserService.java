@@ -16,7 +16,7 @@ public class UserService implements IDao<User> {
 	MarqueService ms = new MarqueService();
     @Override
     public boolean create(User o) {
-        String sql = "insert into users(nom,email,mdp,sexe,type) values (?, ?, ?,?,?)";
+        String sql = "insert into users(nom,email,mdp,sexe,type) values ( ?, ?, ?,?,?)";
         try {
             PreparedStatement ps = Connexion.getInstane().getConnection().prepareStatement(sql);
             ps.setString(1, o.getNom());
