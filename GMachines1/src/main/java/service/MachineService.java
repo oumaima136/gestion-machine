@@ -18,7 +18,7 @@ public class MachineService implements IDao<Machine> {
 	
 MarqueService ms = new MarqueService();  @Override
     public boolean create(Machine o) {
-        String sql = "insert into machine values (null, ?, ?, ?,?)";
+        String sql = "insert into machine(reference,dateAchat,prix,marque) values (?, ?, ?,?)";
         try {
             PreparedStatement ps = Connexion.getInstane().getConnection().prepareStatement(sql);
             ps.setString(1, o.getReference());
